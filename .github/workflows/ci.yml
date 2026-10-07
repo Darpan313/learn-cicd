@@ -21,6 +21,12 @@ jobs:
       - name: Run tests
         run: test -z $(go fmt ./...)
 
+      - name: Install staticcheck
+        run: go install honnef.co/go/tools/cmd/staticcheck@latest
+
+      - name: Run Linter
+        run: go staticcheck ./...
+
   tests:
     name: Tests
     runs-on: ubuntu-latest
