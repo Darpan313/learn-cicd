@@ -21,8 +21,11 @@ jobs:
       - name: Install staticcheck
         run: go install honnef.co/go/tools/cmd/staticcheck@latest
 
+      - name: Run Formatting Checks
+        run: go test -z $(go fmt ./...)
+
       - name: Run Linter
-        run: go staticcheck ./...
+        run: staticcheck ./...
 
   tests:
     name: Tests
