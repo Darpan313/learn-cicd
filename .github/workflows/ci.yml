@@ -6,7 +6,7 @@ on:
 
 jobs:
   formatting: 
-    name: Formmating
+    name: Style
     runs-on: ubuntu-latest
 
     steps:
