@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    name: CD
+    name: Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: "1.27.1"
-      
+
       - name: Build App
         run: ./scripts/buildprod.sh
 
